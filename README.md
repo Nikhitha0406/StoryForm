@@ -118,4 +118,4 @@ Offline Mode: Cache stories and TTS for use in remote areas.
 
 ---
 
-## 📁 Project Structure
+
