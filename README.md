@@ -1,73 +1,121 @@
-# Welcome to your Lovable project
+🌿 Project Description – StoryHealer
+🧠 Problem Statement
+In today's fast-paced world, mental health challenges affect over 1 billion people globally, yet access to affordable and personalized emotional support remains limited. Many individuals, especially students and young adults, face stress, anxiety, and loneliness but are hesitant to seek traditional therapy due to stigma, accessibility, or cost.
 
-## Project info
+💡 Our Solution – StoryHealer
+StoryHealer is an AI-powered storytelling platform designed to promote mental well-being through therapeutic, interactive narratives. It analyzes user emotions and generates custom stories that uplift, comfort, or entertain—tailored to the user's mood and genre preferences.
 
-**URL**: https://lovable.dev/projects/1d262d1c-bf3b-4962-8e22-e8e8f857a948
+The app not only entertains but subtly integrates therapeutic techniques like Cognitive Behavioral Therapy (CBT) patterns, uplifting themes, and interactive choices, creating a safe, imaginative space for emotional healing.
 
-## How can I edit this code?
+🚀 How It Works
+1. User Input
+The user visits the StoryHealer interface and fills out a form:
 
-There are several ways of editing your application.
+Name
 
-**Use Lovable**
+Current Mood (e.g., stressed, anxious, happy)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1d262d1c-bf3b-4962-8e22-e8e8f857a948) and start prompting.
+Preferred Genre (e.g., fantasy, adventure, inspirational)
 
-Changes made via Lovable will be committed automatically to this repo.
+2. Sentiment Analysis
+The backend uses Hugging Face’s sentiment analysis model to:
 
-**Use your preferred IDE**
+Validate or interpret the user’s mood.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Adapt the upcoming story (e.g., add positive twists if the user feels down).
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. AI Story Generation
+A prompt is crafted like:
 
-Follow these steps:
+“Generate a calming fantasy story for a stressed user named Alex.”
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+The prompt is sent to Groq’s API (using a fine-tuned LLaMA model) which responds with a fully generated, coherent narrative in seconds.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. Optional Visuals
+If enabled, a Stable Diffusion API (e.g., via Replicate) generates AI illustrations for key story scenes, enriching the immersive experience.
 
-# Step 3: Install the necessary dependencies.
-npm i
+5. Accessibility Features
+Text-to-Speech (Web Speech API) lets visually impaired users listen to the story.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Google Translate API allows the story to be rendered in the user’s preferred language.
 
-**Edit a file directly in GitHub**
+6. User Data & Progress Storage
+Story progress and preferences are stored in Firebase Firestore, enabling session continuity and minimal setup—ideal for hackathons.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+✨ What Makes It Special
+🌍 Emotional Intelligence + AI
+StoryHealer isn’t just a chatbot or story generator—it’s emotionally aware. It reacts to how users feel, offering:
 
-**Use GitHub Codespaces**
+Uplifting endings to dark moods.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Empowering narratives to low self-esteem.
 
-## What technologies are used for this project?
+Gentle humor for moments of sadness.
 
-This project is built with:
+🧘‍♀ Therapeutic Design
+While not a replacement for therapy, it:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Uses CBT-inspired reframing prompts.
 
-## How can I deploy this project?
+Provides safe emotional release through fictional storytelling.
 
-Simply open [Lovable](https://lovable.dev/projects/1d262d1c-bf3b-4962-8e22-e8e8f857a948) and click on Share -> Publish.
+Encourages positive self-reflection via character choices.
 
-## Can I connect a custom domain to my Lovable project?
+♿ Inclusive by Design
+Users with visual impairments can hear the story.
 
-Yes, you can!
+Multilingual support welcomes non-English speakers.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Minimal hardware or bandwidth needs—accessible from almost any device.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+🎯 Use Cases
+Students under academic pressure: A calming or motivational story can help reset their mindset.
+
+Children with anxiety: Safe, fantastical narratives with happy endings provide comfort.
+
+Users in remote regions: StoryHealer works even on low-end devices with basic internet access.
+
+💎 Why It’s a Great Hackathon Project
+✅ Unique & Impactful – Mental health is often overlooked in tech projects.
+
+✅ Advanced Tech Stack – Combines fast inference, AI APIs, and real-time feedback.
+
+✅ Human-Centered Design – Emotion-first experience, not just data-driven.
+
+✅ Scalable – Can evolve into a school wellness tool, therapy assistant, or journaling companion.
+
+📈 Future Possibilities
+Gamification: Add branching storylines, collect badges, or unlock themes.
+
+User Emotion History: Track changes over time to show emotional progress.
+
+Therapist Integration: Let licensed therapists customize prompts or review user stories.
+
+Offline Mode: Cache stories and TTS for use in remote areas.
+
+## 🚀 Features
+
+- 🧠 *AI-Powered Storytelling* with Groq’s LLaMA model
+- 💬 *Sentiment-Adaptive Narratives* using Hugging Face Transformers
+- 🎨 *Optional AI Illustrations* via Stable Diffusion API (Replicate)
+- 🔊 *Text-to-Speech* with Web Speech API for accessibility
+- 🌐 *Multilingual Output* using Google Translate API
+- 📦 *Realtime Database* using Firebase
+- ⚡ *Fast Deployment* with Vercel (Frontend) & Heroku (Backend)
+
+---
+
+## 🧱 Tech Stack
+
+| Layer        | Technology                          |
+|-------------|--------------------------------------|
+| Frontend     | React.js, Tailwind CSS              |
+| Backend      | Python, Flask                       |
+| AI/ML        | Groq API, Hugging Face Transformers |
+| Database     | Firebase (Firestore)                |
+| Deployment   | Vercel (frontend), Heroku (backend) |
+| Design       | Figma                               |
+
+---
+
+## 📁 Project Structure
